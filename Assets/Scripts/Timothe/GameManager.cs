@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     
     public static GameManager instance;
 
+    public AudioClip clip;
+
     public void Awake()
     {
         if(instance)

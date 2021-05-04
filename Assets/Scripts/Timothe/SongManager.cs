@@ -15,12 +15,24 @@ public class SongManager : MonoBehaviour
     public float songPosition; //Current song position, in seconds 
     public float songPositionInBeats; //Current song position, in beats 
 
+    public int currentChunk = 0; //Current group of notes that has been loaded
+    public int songArrayIndice = 0;
+
    
     void Start()
     {
+        musicSource = GetComponent<AudioSource>();
+
+        musicSource.clip = GameManager.instance.clip;
+
         bps = bpm / 60f;
         sbp = 60f/ bpm;
         dspSongTime = (float) AudioSettings.dspTime;
+
+        // TODO
+        // Load the first chunk of the song
+
+        musicSource.Play();
     }
 
 
@@ -30,5 +42,12 @@ public class SongManager : MonoBehaviour
         songPosition = (float) (AudioSettings.dspTime - dspSongTime - firstBeatOffset); 
         //determine how many beats since the song started 
         songPositionInBeats = songPosition * bps; 
+
+        if (songPositionInBeats >= 8 * currentChunk + 4) {
+            // TODO
+            // Load toutes les notes entre 4 * currentChunk et 4 * (currentChunk + 1)
+        }
+
+
     }
 }

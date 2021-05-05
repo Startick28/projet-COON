@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SongManager : MonoBehaviour
 {
+    public static SongManager instance;
     
     public AudioSource musicSource;
 
@@ -18,7 +19,19 @@ public class SongManager : MonoBehaviour
     public int currentChunk = 0; //Current group of notes that has been loaded
     public int songArrayIndice = 0;
 
-   
+   public void Awake()
+    {
+        if(instance)
+        {
+            Debug.Log("Il y a déjà une instance de SongManager " + name);
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
     void Start()
     {
         musicSource = GetComponent<AudioSource>();

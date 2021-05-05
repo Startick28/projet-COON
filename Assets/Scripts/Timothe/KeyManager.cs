@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class KeyManager : MonoBehaviour
 {
+
+    public static KeyManager instance;
     public Text keyText;
 
     public Indicator indicatorPrefab;
@@ -32,6 +34,19 @@ public class KeyManager : MonoBehaviour
 
     public Key lastKey = Key.Null;
     
+    public void Awake()
+    {
+        if(instance)
+        {
+            Debug.Log("Il y a déjà une instance de KeyManager " + name);
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
     void Start()
     {
         keyText.text = "Current Key Pressed : " + "None";
@@ -67,13 +82,6 @@ public class KeyManager : MonoBehaviour
         }
         
     }
-    /*
-    public IEnumerator addColor(int i) {
-        lineTypes.Add(i);
-        yield return new WaitForSeconds(0.1f);
-        lineTypes.Remove(i);
-    }
-    */
 
     Vector3 noteToPos(int note) {
 

@@ -83,7 +83,7 @@ public class KeyManager : MonoBehaviour
         
     }
 
-    Vector3 noteToPos(int note) {
+    public static Vector3 noteToPos(int note) {
 
         Vector3 res;
         switch (note) {

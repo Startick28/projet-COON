@@ -12,8 +12,7 @@ public class KeyManager : MonoBehaviour
     public Indicator indicatorPrefab;
     public Material[] materials = new Material[12];
 
-    public ArrayList lineTypes = new ArrayList();
-    public Collider lineCollider;
+    //public ArrayList lineTypes = new ArrayList();
     public Renderer lineRenderer;
     public Material baseLineMaterial;
     private float colorTimer = 0f;
@@ -54,33 +53,52 @@ public class KeyManager : MonoBehaviour
 
     void Update()
     {
+        //Affichage info dernière note
         for (int i = 21 ; i <= 108; i++) {
             if (MidiJack.MidiMaster.GetKeyDown(i)) {
                 lastKey = (Key) i-21;
                 keyText.text = "Current Key Pressed : " + i.ToString();
             }
         }
+    }
+
+    void FixedUpdate()
+    {
+        RaycastHit hit;
         Indicator tmp;
-        lineTypes.Clear();
+        BasicCube tmpCube;
+        //lineTypes.Clear();
         for (int i = 48 ; i <= 83; i++) {
             if (MidiJack.MidiMaster.GetKeyDown(i)) {
+                // Affichage de l'indicateur
                 tmp = Instantiate(indicatorPrefab,noteToPos(i),Quaternion.identity);
                 tmp.gameObject.GetComponent<MeshRenderer>().material = materials[(i-36)%12];
+                // Affichage ligne
                 changeLineColor = true;
                 lineRenderer.material = materials[(i-36)%12];
-                lineTypes.Add(i);
+                // Tests collisions.
+                if (Physics.Raycast(noteToPos(i),Vector3.up, out hit, 5))
+                {
+                    if (hit.collider.CompareTag("BaseBlock"))
+                    {
+                        tmpCube = hit.transform.GetComponent<BasicCube>();
+                        if (tmpCube.type == i) tmpCube.Hit();
+                    }
+                }
+                
+
+                //lineTypes.Add(i);
             }
         }
 
         if (changeLineColor) {
             colorTimer += Time.deltaTime;
         }
-        if (colorTimer>=0.2f) {
+        if (colorTimer>=0.1f) {
             colorTimer = 0f;
             changeLineColor = false;
             lineRenderer.material = baseLineMaterial;
         }
-        
     }
 
     public static Vector3 noteToPos(int note) {

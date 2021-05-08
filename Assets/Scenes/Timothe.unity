@@ -634,6 +634,7 @@ MonoBehaviour:
   songArrayIndice: 0
   cubePrefab: {fileID: 6038423779077534193, guid: 2c2ef04884ce4e94e8f10856ea03d0fa,
     type: 3}
+  ennemiesContainer: {fileID: 1741270438}
 --- !u!4 &1702740947
 Transform:
   m_ObjectHideFlags: 0
@@ -788,7 +789,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 3, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1917750799
 MeshRenderer:

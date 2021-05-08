@@ -33,6 +33,7 @@ public class MonsterFactory : MonoBehaviour
 	{
 
 		Monster monster;
+
 		if (deadMonsters.Count > 0)
 		{
 			monster = deadMonsters.Dequeue();

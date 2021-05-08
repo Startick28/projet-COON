@@ -1,25 +1,16 @@
 fileFormatVersion: 2
-guid: e7f6f64efc0722947a0a28b1fa72ecd5
+guid: 6081cd3c593359246b53885747f3b0de
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2304713611768012153
-    second: sprite_ennemis_0
+      213: 7771298228190408252
+    second: sprite_ennemis9
   - first:
-      213: 70911772601956444
-    second: sprite_ennemis_1
+      213: -3408412090397625635
+    second: sprite_ennemis10
   - first:
-      213: 8712272083480241283
-    second: sprite_ennemis_2
-  - first:
-      213: -538864317218879378
-    second: sprite_ennemis_3
-  - first:
-      213: 4832817504646430018
-    second: sprite_ennemis_4
-  - first:
-      213: 1311558312652188467
-    second: sprite_ennemis_5
+      213: -3951939551549268040
+    second: sprite_ennemis11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,11 +96,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite_ennemis_0
+      name: sprite_ennemis9
       rect:
         serializedVersion: 2
-        x: 58
-        y: 154
+        x: 9
+        y: 6
         width: 71
         height: 84
       alignment: 0
@@ -119,18 +110,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7826f855e230400e0800000000000000
-      internalID: -2304713611768012153
+      spriteID: c3e69ee709239db60800000000000000
+      internalID: 7771298228190408252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_ennemis_1
+      name: sprite_ennemis10
       rect:
         serializedVersion: 2
-        x: 164
-        y: 157
+        x: 115
+        y: 9
         width: 90
         height: 129
       alignment: 0
@@ -140,19 +131,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c583558a1edebf000800000000000000
-      internalID: 70911772601956444
+      spriteID: dd2f3b72343e2b0d0800000000000000
+      internalID: -3408412090397625635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_ennemis_2
+      name: sprite_ennemis11
       rect:
         serializedVersion: 2
-        x: 285
-        y: 154
-        width: 92
+        x: 237
+        y: 6
+        width: 91
         height: 109
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -161,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3846462ec4538e870800000000000000
-      internalID: 8712272083480241283
+      spriteID: 8bfd6188ae3e729c0800000000000000
+      internalID: -3951939551549268040
       vertices: []
       indices: 
       edges: []

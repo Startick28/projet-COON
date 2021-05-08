@@ -69,6 +69,7 @@ public class KeyManager : MonoBehaviour
         BasicCube tmpCube;
         //lineTypes.Clear();
         for (int i = 48 ; i <= 83; i++) {
+            // QUAND ON APPUIE SUR UNE TOUCHE
             if (MidiJack.MidiMaster.GetKeyDown(i)) {
                 // Affichage de l'indicateur
                 tmp = Instantiate(indicatorPrefab,noteToPos(i),Quaternion.identity);

@@ -29,21 +29,21 @@ public class MonsterFactory : MonoBehaviour
 		}
 	}
 
-	public GameObject GetMonster(Monster originalMonster, Vector3 pos)
+	public GameObject GetMonster(Monster originalMonster, Vector3 pos, int type)
 	{
 
 		Monster monster;
-		transform.position = pos;
 		if (deadMonsters.Count > 0)
 		{
-			transform.position = pos;
 			monster = deadMonsters.Dequeue();
 			monster.gameObject.SetActive(true);
-			monster = Instantiate(originalMonster, pos, Quaternion.identity);
+			monster.transform.position = pos;
+			monster.type = type;
 		}
 		else
 		{
 			monster = Instantiate(originalMonster, pos, Quaternion.identity);
+			monster.type = type;
 		}
 		return monster.gameObject;
 	}

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Laser Material
+  m_Name: Laser Material 1
   m_Shader: {fileID: -6465566751694194690, guid: 3dc592fd08cc5a04fa7335a083825998,
     type: 3}
   m_ShaderKeywords: 
@@ -24,8 +24,8 @@ Material:
     - Laser_Scale: 20
     - Laser_Smoothness: 10
     - Laser_Thickness: 30
-    - Vector1_65CDB1CF: 0
+    - Vector1_65CDB1CF: 0.2
     m_Colors:
-    - Color_E3102D7: {r: 2.670157, g: 2.670157, b: 2.670157, a: 1}
-    - Laser_Density: {r: 0.01, g: 1, b: 0, a: 0}
-    - Laser_Speed: {r: 0.02, g: 0.02, b: 0, a: 0}
+    - Color_E3102D7: {r: 766.9961, g: 0, b: 0, a: 1}
+    - Laser_Density: {r: 0.2, g: 1, b: 0, a: 0}
+    - Laser_Speed: {r: 0.05, g: 0.01, b: 0, a: 0}

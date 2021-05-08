@@ -47,49 +47,45 @@ public class SongManager : MonoBehaviour
         bps = bpm / 60f;
         sbp = 60f/ bpm;
 
-        StartCoroutine(StartMusic());
+        dspSongTime = (float) AudioSettings.dspTime;
+        musicSource.Play();
         
+        currentChunk = -1;
+
     }
 
 
     void Update()
     {
-        //determine how many seconds since the song started 
         songPosition = (float) (AudioSettings.dspTime - dspSongTime - firstBeatOffset); 
-        //determine how many beats since the song started 
         songPositionInBeats = songPosition * bps; 
 
-        BasicCube tmp;
-        Vector3 pos;
+        if (songPosition >= 4 * currentChunk + 2) {
 
-        if (songPosition >= 4 *(currentChunk+1)) {
-            foreach ( float[] noteArray in song.notes ) {
-                if (noteArray[0] >= 4*(currentChunk+2)*bps && noteArray[0] < 4*(currentChunk+3)*bps) {
-                    for (int i = 1 ; i < noteArray.Length ; i++) {
-                        pos = new Vector3( KeyManager.noteToPos( (int) (noteArray[i]+21)).x , 3 + noteArray[0] + 1 - songPositionInBeats ,0);
-                        tmp = Instantiate(cubePrefab, pos ,Quaternion.identity);
-                    }
-                }
-            }
+            StartCoroutine(LoadChunk(currentChunk));
             currentChunk++;
         }
     }
 
-    public IEnumerator StartMusic() {
+
+    public IEnumerator LoadChunk(int chunk) {
         BasicCube tmp;
         Vector3 pos;
         foreach ( float[] noteArray in song.notes ) {
-            if (noteArray[0] < 8*bps) {
+            if (noteArray[0] >= 4*(chunk+1)*bps && noteArray[0] < 4*(chunk+2)*bps) {
                 for (int i = 1 ; i < noteArray.Length ; i++) {
-                    pos = new Vector3( KeyManager.noteToPos( (int) noteArray[i]+21).x , 3 + 3 * bps + noteArray[0] + firstBeatOffset ,0);
+                    //determine how many seconds since the song started 
+                    songPosition = (float) (AudioSettings.dspTime - dspSongTime - firstBeatOffset); 
+                    //determine how many beats since the song started 
+                    songPositionInBeats = songPosition * bps; 
+                    pos = new Vector3( KeyManager.noteToPos( (int) (noteArray[i]+21)).x , 3.05f + noteArray[0] - songPositionInBeats ,0);
+                    Debug.Log(songPositionInBeats);
                     tmp = Instantiate(cubePrefab, pos ,Quaternion.identity);
+                    yield return null;
                 }
             }
         }
-        yield return new WaitForSeconds(3);
-        currentChunk = 0;
-        dspSongTime = (float) AudioSettings.dspTime;
-        musicSource.Play();
+        yield return null;
     }
 
 }

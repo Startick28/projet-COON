@@ -29,7 +29,7 @@ public class MonsterFactory : MonoBehaviour
 		}
 	}
 
-	public GameObject GetMonster()
+	public GameObject GetMonster(Vector3 pos)
 	{
 
 		Monster monster;
@@ -41,7 +41,7 @@ public class MonsterFactory : MonoBehaviour
 		}
 		else
 		{
-			monster = Instantiate(originalMonster);
+			monster = Instantiate(originalMonster, pos, Quaternion.identity);
 		}
 		return monster.gameObject;
 	}

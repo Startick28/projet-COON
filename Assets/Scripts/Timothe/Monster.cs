@@ -1,32 +1,38 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
 public class Monster : MonoBehaviour
 {
-    private Rigidbody rigi;
-    private new Renderer renderer;
+    public int type = 48;
 
-[SerializeField]
-private float speed;
-// Use this for initialization
-void Awake()
-{
-    rigi = GetComponent<Rigidbody>();
-    renderer = GetComponent<Renderer>();
-}
+    public bool hit = false;
+    public bool missed = false;
 
-private void OnEnable()
-{
-    renderer.material.color = Random.ColorHSV();
-}
+    void Update()
+    {
+        transform.Translate(0, -SongManager.instance.bps * Time.deltaTime, 0);
+        if (transform.position.y < 1.4f) Destroy(this.gameObject);
+    }
 
-private void FixedUpdate()
-{
-    rigi.velocity = transform.up * speed;
-}
+    public void Hit()
+    {
+        float Y = transform.position.y;
+        if (Y >= BasicLine.lineHeight - 0.04 && Y <= BasicLine.lineHeight + 0.04)
+        {
+            Debug.Log("PERFECT");
+            Destroy(this.gameObject);
+        }
+        else if ((Y >= BasicLine.lineHeight - 0.07 && Y <= BasicLine.lineHeight - 0.04) || (Y >= BasicLine.lineHeight + 0.04 && Y <= BasicLine.lineHeight + 0.07))
+        {
+            Debug.Log("GOOD");
+            Destroy(this.gameObject);
+        }
+        else if ((Y >= BasicLine.lineHeight - 0.1 && Y <= BasicLine.lineHeight - 0.07) || (Y >= BasicLine.lineHeight + 0.07 && Y <= BasicLine.lineHeight + 1))
+        {
+            Debug.Log("OK");
+            Destroy(this.gameObject);
+        }
+    }
 
-private void OnTriggerEnter(Collider other)
-{
-    MonsterFactory.EndMonster(this);
-}
 }

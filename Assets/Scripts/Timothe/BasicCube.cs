@@ -6,9 +6,6 @@ public class BasicCube : MonoBehaviour
 {
     public int type = 48;
 
-    public bool hit = false;
-    public bool missed = false;
-    
     void Update()
     {
         transform.Translate(0,-SongManager.instance.bps*Time.deltaTime,0);

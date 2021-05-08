@@ -409,7 +409,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 0f400c74c5b90d147bb7a69a04fd046c, type: 2}
   - {fileID: 2100000, guid: f499a1a3cd0d216468c8cfebaf6286c9, type: 2}
   - {fileID: 2100000, guid: b0185018da08d8848abe18be84bd9651, type: 2}
-  lineCollider: {fileID: 0}
   lineRenderer: {fileID: 1917750799}
   baseLineMaterial: {fileID: 2100000, guid: d156f91cd481b124c8f3d07eb81c142d, type: 2}
   lastKey: 88

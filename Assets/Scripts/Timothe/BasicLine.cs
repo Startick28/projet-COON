@@ -9,13 +9,13 @@ public class BasicLine : MonoBehaviour
     
    void OnTriggerEnter(Collider col) {
        if (col.CompareTag("BaseBlock")) {
-           col.gameObject.GetComponent<BasicCube>().hit = true;
+           //col.gameObject.GetComponent<BasicCube>().hit = true;
        }
    }
 
     void OnTriggerExit(Collider col) {
        if (col.CompareTag("BaseBlock")) {
-           col.gameObject.GetComponent<BasicCube>().missed = true;
+           //col.gameObject.GetComponent<BasicCube>().missed = true;
        }
    }
 

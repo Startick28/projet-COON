@@ -21,11 +21,12 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
+    - Laser_Alpha: 0
     - Laser_Scale: 20
-    - Laser_Smoothness: 10
-    - Laser_Thickness: 30
-    - Vector1_65CDB1CF: 0.2
+    - Laser_Smoothness: 20
+    - Laser_Thickness: 50
+    - Vector1_65CDB1CF: 0.1
     m_Colors:
-    - Color_E3102D7: {r: 766.9961, g: 0, b: 0, a: 1}
-    - Laser_Density: {r: 0.2, g: 1, b: 0, a: 0}
-    - Laser_Speed: {r: 0.05, g: 0.01, b: 0, a: 0}
+    - Color_E3102D7: {r: 11.984314, g: 0, b: 0, a: 1}
+    - Laser_Density: {r: 0, g: 1, b: 0, a: 0}
+    - Laser_Speed: {r: 0.02, g: 0.1, b: 0, a: 0}

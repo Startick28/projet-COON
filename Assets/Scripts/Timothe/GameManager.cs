@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public AudioClip clip;
 
+    public int songNumber= 0;
+
     public void Awake()
     {
         if(instance)
@@ -20,7 +22,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
-
+        DontDestroyOnLoad(this.gameObject);
         Application.targetFrameRate = 60;
 
 

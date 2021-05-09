@@ -11,7 +11,6 @@ public class SongManager : MonoBehaviour
     public SongRepository.Song song;
 
     private SongRepository.Song[] songList = { SongRepository.song1, SongRepository.song2 };
-    public int songNumber;
 
     public float bpm = 120f;
     public float firstBeatOffset = 0f;
@@ -46,7 +45,7 @@ public class SongManager : MonoBehaviour
 
     void Start()
     {
-        song = songList[songNumber];
+        song = songList[GameManager.instance.songNumber];
         musicSource = GetComponent<AudioSource>();
 
         musicSource.clip = GameManager.instance.clip;
@@ -171,15 +170,4 @@ public class SongManager : MonoBehaviour
 
     }
 
-    public void ChangeSong()
-    {
-        if (songNumber < songList.Length)
-        {
-            songNumber++;
-        }
-        else
-        {
-            songNumber = 0;
-        }
-    }
 }

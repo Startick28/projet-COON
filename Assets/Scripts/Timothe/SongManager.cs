@@ -22,7 +22,7 @@ public class SongManager : MonoBehaviour
     public int currentChunk = 1; //Current group of notes that has been loaded
     public int songArrayIndice = 0;
 
-    public BasicCube cubePrefab;
+    public Monster monsterPrefab;
     public GameObject ennemiesContainer;
 
     public Transform[] fireTransforms = new Transform[5];
@@ -80,7 +80,6 @@ public class SongManager : MonoBehaviour
 
 
     public IEnumerator LoadChunk(int chunk) {
-        BasicCube tmp;
         Vector3 pos;
         foreach ( float[] noteArray in song.notes ) {
             if (noteArray[0] >= 4*(chunk+1)*bps && noteArray[0] < 4*(chunk+2)*bps) {
@@ -91,10 +90,15 @@ public class SongManager : MonoBehaviour
                     songPositionInBeats = songPosition * bps; 
                     pos = new Vector3( KeyManager.noteToPos( (int) (noteArray[i]+21)).x , 3.05f + noteArray[0] - songPositionInBeats ,0);
                     
-                    tmp = Instantiate(cubePrefab, pos ,Quaternion.identity);
-                    tmp.transform.SetParent(ennemiesContainer.transform);
-                    tmp.type = (int) noteArray[i]+21;
-                    tmp.gameObject.GetComponent<MeshRenderer>().material = KeyManager.instance.materials[(((int) noteArray[i]+21)-36)%12];
+
+                    MonsterFactory._instance.GetMonster(pos,((int) noteArray[i]+21));
+
+
+
+                    //tmp = Instantiate(monsterPrefab, pos ,Quaternion.identity);
+                    //tmp.transform.SetParent(ennemiesContainer.transform);
+                    //tmp.type = (int) noteArray[i]+21;
+                    //tmp.gameObject.GetComponent<MeshRenderer>().material = KeyManager.instance.materials[(((int) noteArray[i]+21)-36)%12];
                     yield return null;
                 }
             }
@@ -108,8 +112,8 @@ public class SongManager : MonoBehaviour
         float pulseLength = 0.2f;
         Vector3 originalScale1 = fireTransforms[0].localScale;
         Vector3 originalScale2 = fireTransforms[3].localScale;
-        Vector3 finalScale1 = new Vector3(originalScale1.x + 0.5f, originalScale1.y + 0.3f, originalScale1.z);
-        Vector3 finalScale2 = new Vector3(originalScale2.x + 0.5f, originalScale2.y + 0.3f, originalScale2.z);
+        Vector3 finalScale1 = new Vector3(originalScale1.x + 0.5f, originalScale1.y + 0.1f, originalScale1.z);
+        Vector3 finalScale2 = new Vector3(originalScale2.x + 0.5f, originalScale2.y + 0.1f, originalScale2.z);
         Vector3 tmp1 = originalScale1;
         Vector3 tmp2 = originalScale2;
 

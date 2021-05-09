@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 97dbe090c72ae2d48b006deba413dbde,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7917,7 +7917,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750514800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 828618116}
@@ -31560,7 +31560,7 @@ MonoBehaviour:
   songPositionInBeats: 0
   currentChunk: 0
   songArrayIndice: 0
-  cubePrefab: {fileID: 6038423779077534193, guid: 2c2ef04884ce4e94e8f10856ea03d0fa,
+  monsterPrefab: {fileID: 1493075113026087552, guid: fd74f0916c059074e8dc5e514dd04e6e,
     type: 3}
   ennemiesContainer: {fileID: 1741270438}
   fireTransforms:
@@ -31638,7 +31638,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f8a83d513b75a1d46aab71774477f628, type: 3}
   m_Color: {r: 1, g: 0.8349056, b: 0.9764151, a: 1}
   m_FlipX: 0
@@ -31658,7 +31658,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711425526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.39, z: 0}
+  m_LocalPosition: {x: 0, y: -0.39, z: -0.1}
   m_LocalScale: {x: 2, y: 1.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -36618,6 +36618,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 750514801}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1921838807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1921838809}
+  - component: {fileID: 1921838808}
+  m_Layer: 0
+  m_Name: Monster Factory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1921838808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921838807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c19d293fd0b044cae7563d34517761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMonster: {fileID: 1493075113026087552, guid: fd74f0916c059074e8dc5e514dd04e6e,
+    type: 3}
+  ennemiesContainer: {fileID: 1741270438}
+  type0: {fileID: -2304713611768012153, guid: e7f6f64efc0722947a0a28b1fa72ecd5, type: 3}
+  type1: {fileID: 70911772601956444, guid: e7f6f64efc0722947a0a28b1fa72ecd5, type: 3}
+  type2: {fileID: 8712272083480241283, guid: e7f6f64efc0722947a0a28b1fa72ecd5, type: 3}
+  type3: {fileID: 8369149128637738118, guid: 4fabb011e7217754a887e5d026d080c6, type: 3}
+  type4: {fileID: -2001410553381638972, guid: 4fabb011e7217754a887e5d026d080c6, type: 3}
+  type5: {fileID: 8460502610243280703, guid: 4fabb011e7217754a887e5d026d080c6, type: 3}
+  type6: {fileID: -142313019183238337, guid: 5e7d2330fc514fe45adafc1048c7e471, type: 3}
+  type7: {fileID: -4623058385485945754, guid: 5e7d2330fc514fe45adafc1048c7e471, type: 3}
+  type8: {fileID: -2273374051766476284, guid: 5e7d2330fc514fe45adafc1048c7e471, type: 3}
+  type9: {fileID: 7771298228190408252, guid: 6081cd3c593359246b53885747f3b0de, type: 3}
+  type10: {fileID: -3408412090397625635, guid: 6081cd3c593359246b53885747f3b0de, type: 3}
+  type11: {fileID: -3951939551549268040, guid: 6081cd3c593359246b53885747f3b0de, type: 3}
+--- !u!4 &1921838809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921838807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.092695646, y: 5.792452, z: -3.2941446}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1935306547
 GameObject:

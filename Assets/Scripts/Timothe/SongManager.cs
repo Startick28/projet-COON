@@ -22,7 +22,6 @@ public class SongManager : MonoBehaviour
     public int songArrayIndice = 0;
 
     public BasicCube cubePrefab;
-    public GameObject ennemiesContainer;
 
    public void Awake()
     {
@@ -80,11 +79,8 @@ public class SongManager : MonoBehaviour
                     //determine how many beats since the song started 
                     songPositionInBeats = songPosition * bps; 
                     pos = new Vector3( KeyManager.noteToPos( (int) (noteArray[i]+21)).x , 3.05f + noteArray[0] - songPositionInBeats ,0);
-                    
+                    Debug.Log(songPositionInBeats);
                     tmp = Instantiate(cubePrefab, pos ,Quaternion.identity);
-                    tmp.transform.SetParent(ennemiesContainer.transform);
-                    tmp.type = (int) noteArray[i]+21;
-                    tmp.gameObject.GetComponent<MeshRenderer>().material = KeyManager.instance.materials[(((int) noteArray[i]+21)-36)%12];
                     yield return null;
                 }
             }

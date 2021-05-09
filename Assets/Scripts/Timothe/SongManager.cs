@@ -80,6 +80,7 @@ public class SongManager : MonoBehaviour
                     //determine how many beats since the song started 
                     songPositionInBeats = songPosition * bps; 
                     pos = new Vector3( KeyManager.noteToPos( (int) (noteArray[i]+21)).x , 3.05f + noteArray[0] - songPositionInBeats ,0);
+                    
                     tmp = Instantiate(cubePrefab, pos ,Quaternion.identity);
                     tmp.transform.SetParent(ennemiesContainer.transform);
                     tmp.type = (int) noteArray[i]+21;

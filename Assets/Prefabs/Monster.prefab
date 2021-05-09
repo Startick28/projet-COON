@@ -48,6 +48,8 @@ MonoBehaviour:
   type: 48
   hit: 0
   missed: 0
+  vie: {fileID: 0}
+  score: {fileID: 0}
 --- !u!212 &8529072045514788134
 SpriteRenderer:
   m_ObjectHideFlags: 0

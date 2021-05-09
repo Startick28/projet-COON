@@ -5,14 +5,14 @@ using TMPro;
 public class ChangeMusic : MonoBehaviour
 {
     // Start is called before the first frame update
-    public SongRepository.Song song = SongRepository.song1;
+    public TextMeshProUGUI chanson;
 
     private void Start()
     {
-        gameObject.GetComponent<TextMeshPro>().text = song.ToString();
+        
     }
     public void NextMusic()
     {
-        gameObject.GetComponent<TextMeshPro>().text = song.ToString();
+        
     }
 }

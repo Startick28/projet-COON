@@ -8,7 +8,7 @@ public class SongManager : MonoBehaviour
     
     public AudioSource musicSource;
 
-    public SongRepository.Song song;
+    public SongRepository.Song song =  SongRepository.song1;
 
     private SongRepository.Song[] songList = { SongRepository.song1, SongRepository.song2 };
     public int songNumber;

@@ -31551,6 +31551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1702740945}
+  songNumber: 0
   bpm: 120
   firstBeatOffset: 0
   bps: 2
@@ -36651,18 +36652,13 @@ MonoBehaviour:
   originalMonster: {fileID: 1493075113026087552, guid: fd74f0916c059074e8dc5e514dd04e6e,
     type: 3}
   ennemiesContainer: {fileID: 1741270438}
-  type0: {fileID: -2304713611768012153, guid: e7f6f64efc0722947a0a28b1fa72ecd5, type: 3}
-  type1: {fileID: 70911772601956444, guid: e7f6f64efc0722947a0a28b1fa72ecd5, type: 3}
-  type2: {fileID: 8712272083480241283, guid: e7f6f64efc0722947a0a28b1fa72ecd5, type: 3}
-  type3: {fileID: 8369149128637738118, guid: 4fabb011e7217754a887e5d026d080c6, type: 3}
-  type4: {fileID: -2001410553381638972, guid: 4fabb011e7217754a887e5d026d080c6, type: 3}
-  type5: {fileID: 8460502610243280703, guid: 4fabb011e7217754a887e5d026d080c6, type: 3}
-  type6: {fileID: -142313019183238337, guid: 5e7d2330fc514fe45adafc1048c7e471, type: 3}
-  type7: {fileID: -4623058385485945754, guid: 5e7d2330fc514fe45adafc1048c7e471, type: 3}
-  type8: {fileID: -2273374051766476284, guid: 5e7d2330fc514fe45adafc1048c7e471, type: 3}
-  type9: {fileID: 7771298228190408252, guid: 6081cd3c593359246b53885747f3b0de, type: 3}
-  type10: {fileID: -3408412090397625635, guid: 6081cd3c593359246b53885747f3b0de, type: 3}
-  type11: {fileID: -3951939551549268040, guid: 6081cd3c593359246b53885747f3b0de, type: 3}
+  spriteArray:
+  - {fileID: -2304713611768012153, guid: e7f6f64efc0722947a0a28b1fa72ecd5, type: 3}
+  - {fileID: 70911772601956444, guid: e7f6f64efc0722947a0a28b1fa72ecd5, type: 3}
+  - {fileID: 8712272083480241283, guid: e7f6f64efc0722947a0a28b1fa72ecd5, type: 3}
+  - {fileID: 8369149128637738118, guid: 4fabb011e7217754a887e5d026d080c6, type: 3}
+  - {fileID: -2001410553381638972, guid: 4fabb011e7217754a887e5d026d080c6, type: 3}
+  - {fileID: 8460502610243280703, guid: 4fabb011e7217754a887e5d026d080c6, type: 3}
 --- !u!4 &1921838809
 Transform:
   m_ObjectHideFlags: 0

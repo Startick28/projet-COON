@@ -5,7 +5,7 @@ using TMPro;
 
 public class HealthManager : MonoBehaviour
 {
-    public TextMeshPro vie;
+    public TextMeshProUGUI vie;
 
     public void SetMaxHealth(int health)
     {

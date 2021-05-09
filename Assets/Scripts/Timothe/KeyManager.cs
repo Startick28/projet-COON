@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class KeyManager : MonoBehaviour
 {
-
+    private PlayerHealth vie;
     public static KeyManager instance;
     public Text keyText;
 
@@ -69,6 +69,10 @@ public class KeyManager : MonoBehaviour
         for (int i = 48 ; i <= 83; i++) {
             // QUAND ON APPUIE SUR UNE TOUCHE
             if (MidiJack.MidiMaster.GetKeyDown(i)) {
+                // Décrémenter la vie
+                vie.TakeDamage(5);
+
+
                 // Affichage de l'indicateur
                 tmp = Instantiate(indicatorPrefab,noteToPos(i),Quaternion.identity);
                 tmp.gameObject.GetComponent<MeshRenderer>().material = materials[(i-36)%12];

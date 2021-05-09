@@ -8,7 +8,10 @@ public class SongManager : MonoBehaviour
     
     public AudioSource musicSource;
 
-    public SongRepository.Song song = SongRepository.song1;
+    public SongRepository.Song song;
+
+    private SongRepository.Song[] songList = { SongRepository.song1, SongRepository.song2 };
+    public int songNumber;
 
     public float bpm = 120f;
     public float firstBeatOffset = 0f;
@@ -43,6 +46,7 @@ public class SongManager : MonoBehaviour
 
     void Start()
     {
+        song = songList[songNumber];
         musicSource = GetComponent<AudioSource>();
 
         musicSource.clip = GameManager.instance.clip;
@@ -88,7 +92,7 @@ public class SongManager : MonoBehaviour
                     songPosition = (float) (AudioSettings.dspTime - dspSongTime - firstBeatOffset); 
                     //determine how many beats since the song started 
                     songPositionInBeats = songPosition * bps; 
-                    pos = new Vector3( KeyManager.noteToPos( (int) (noteArray[i]+21)).x , 3.05f + noteArray[0] - songPositionInBeats ,0);
+                    pos = new Vector3( KeyManager.noteToPos( (int) (noteArray[i]+21)).x , 3.05f + (noteArray[0] - songPositionInBeats)*song.speedMultiplier ,0);
                     
 
                     MonsterFactory._instance.GetMonster(pos,((int) noteArray[i]+21));
@@ -167,4 +171,15 @@ public class SongManager : MonoBehaviour
 
     }
 
+    public void ChangeSong()
+    {
+        if (songNumber < songList.Length)
+        {
+            songNumber++;
+        }
+        else
+        {
+            songNumber = 0;
+        }
+    }
 }

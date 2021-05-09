@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
         healthManager.SetMaxHealth(maxHealth);
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         if (currentHealth <= 0)
@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    void Heal(int heal)
+    public void Heal(int heal)
     {
         currentHealth += heal;
         if (currentHealth>= maxHealth)

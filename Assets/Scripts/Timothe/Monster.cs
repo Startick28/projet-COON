@@ -13,7 +13,7 @@ public class Monster : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(0, -SongManager.instance.bps * Time.deltaTime, 0);
+        transform.Translate(0, -SongManager.instance.bps * Time.deltaTime * SongManager.instance.song.speedMultiplier, 0);
         if (transform.position.y < 1.4f) {
             MonsterFactory.EndMonster(this);
         }

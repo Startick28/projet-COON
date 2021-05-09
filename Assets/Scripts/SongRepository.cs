@@ -9,6 +9,7 @@ public static class SongRepository
         public float offset;
 
         public float[][] notes;
+        public float speedMultiplier;
         public static Song song1 = new Song();
         public static Song song2 = new Song();
         }
@@ -31,6 +32,7 @@ public static class SongRepository
     {
         song1.bpm = 89f;
         song1.offset = 3f;
+        song1.speedMultiplier = 1;
         song1.notes = new float[][] {new float[]{0.5f,43f} , new float[]{1.5f,43f} , new float[]{2.5f,43f} , new float[]{3.5f,45f} , new float[]{4.5f,47f} , new float[]{6.5f,45f},
         new float[]{8.5f,43f} , new float[]{9.5f,47f} , new float[]{10.5f,45f} , new float[]{11.5f,45f} , new float[]{12.5f,43f}, 
         new float[]{17f,43f} , new float[]{18f,43f} , new float[]{19f,43f} , new float[]{20f,45f} , new float[]{21f,47f} , new float[]{23f,45f},
@@ -49,6 +51,7 @@ public static class SongRepository
 
         song2.bpm = 107f;
         song2.offset = 3f;
+        song2.speedMultiplier = 2;
         song2.notes = new float[][] {new float[]{0f,fa1,ré1} , new float[]{0.75f, fa3} , new float[]{1f,mi3} , 
         new float[]{1.25f,fa3} , new float[]{1.5f,ré3} , new float[]{2.25f,fa3} , new float[]{2.5f,mi3},
         new float[]{2.75f,fa3} , new float[]{3f,si2} , new float[]{4f,sol1,ré1} , new float[]{8f,do1,mi1} , new float[]{8.75f,mi3},

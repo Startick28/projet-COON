@@ -7,7 +7,7 @@ public static class SongRepository
     public struct Song{
         public float bpm;
         public float offset;
-
+        public string name;
         public float[][] notes;
         public float speedMultiplier;
         public static Song song1 = new Song();
@@ -30,6 +30,7 @@ public static class SongRepository
 
     static SongRepository()
     {
+        song1.name = "chanson 1";
         song1.bpm = 89f;
         song1.offset = 3f;
         song1.speedMultiplier = 1;
@@ -43,12 +44,12 @@ public static class SongRepository
         new float[]{57f,45f} , new float[]{58f,43f} , new float[]{59f,41f} , new float[]{60f,40f} , new float[]{61f,38f} , new float[]{66f,43f}, 
         new float[]{67f,43f} , new float[]{68f,43f} , new float[]{69f,45f} , new float[]{70f,47f} ,new float[] {72f,45f} ,
         new float[]{74f,43f} , new float[]{75f,47f} , new float[]{76f,45f} , new float[]{77f,45f} , new float[]{78f,43f}};
-   
 
-        
 
-        
 
+
+
+        song2.name = "chanson 2";
         song2.bpm = 107f;
         song2.offset = 3f;
         song2.speedMultiplier = 2;

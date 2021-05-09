@@ -64,7 +64,7 @@ public class KeyManager : MonoBehaviour
 
         RaycastHit hit;
         Indicator tmp;
-        BasicCube tmpCube;
+        Monster tmpMonster;
         //lineTypes.Clear();
         for (int i = 48 ; i <= 83; i++) {
             // QUAND ON APPUIE SUR UNE TOUCHE
@@ -79,10 +79,11 @@ public class KeyManager : MonoBehaviour
                 // Tests collisions.
                 if (Physics.Raycast(noteToPos(i),Vector3.up, out hit, 5))
                 {
-                    if (hit.collider.CompareTag("BaseBlock"))
+                    if (hit.collider.CompareTag("Monster"))
                     {
-                        tmpCube = hit.transform.GetComponent<BasicCube>();
-                        if (tmpCube.type == i) tmpCube.Hit();
+                        Debug.Log("AH");
+                        tmpMonster = hit.transform.GetComponent<Monster>();
+                        if (tmpMonster.type == i) tmpMonster.Hit();
                     }
                 }
                 
@@ -112,112 +113,112 @@ public class KeyManager : MonoBehaviour
         switch (note) {
 
             case 48:
-                res = new Vector3(-8.723f,-1.69f,0); 
+                res = new Vector3(-8.723f,-1.69f,-0.5f); 
                 break;
             case 49:
-                res = new Vector3(-8.277f,-0.2f,0);//#
+                res = new Vector3(-8.277f,-0.2f,-0.5f);//#
                 break;
             case 50:
-                res = new Vector3(-7.852f,-1.69f,0);
+                res = new Vector3(-7.852f,-1.69f,-0.5f);
                 break;
             case 51:
-                res = new Vector3(-7.391f,-0.2f,0); //#
+                res = new Vector3(-7.391f,-0.2f,-0.5f); //#
                 break;
             case 52:
-                res = new Vector3(-6.96f,-1.69f,0);
+                res = new Vector3(-6.96f,-1.69f,-0.5f);
                 break;
             case 53:
-                res = new Vector3(-6.082f,-1.69f,0);
+                res = new Vector3(-6.082f,-1.69f,-0.5f);
                 break;
             case 54:
-                res = new Vector3(-5.633f,-0.2f,0); //#
+                res = new Vector3(-5.633f,-0.2f,-0.5f); //#
                 break;
             case 55:
-                res = new Vector3(-5.2f,-1.69f,0);
+                res = new Vector3(-5.2f,-1.69f,-0.5f);
                 break;
             case 56:
-                res = new Vector3(-4.75f,-0.2f,0); //#
+                res = new Vector3(-4.75f,-0.2f,-0.5f); //#
                 break;
             case 57:
-                res = new Vector3(-4.32f,-1.69f,0);
+                res = new Vector3(-4.32f,-1.69f,-0.5f);
                 break;
             case 58:
-                res = new Vector3(-3.875f,-0.2f,0); //#
+                res = new Vector3(-3.875f,-0.2f,-0.5f); //#
                 break;
             case 59:
-                res = new Vector3(-3.513f,-1.69f,0);
+                res = new Vector3(-3.513f,-1.69f,-0.5f);
                 break;
             case 60:
-                res = new Vector3(-2.716f,-1.69f,0);
+                res = new Vector3(-2.716f,-1.69f,-0.5f);
                 break;
             case 61:
-                res = new Vector3(-2.281f,-0.2f,0); //#
+                res = new Vector3(-2.281f,-0.2f,-0.5f); //#
                 break;
             case 62:
-                res = new Vector3(-1.844f,-1.69f,0);
+                res = new Vector3(-1.844f,-1.69f,-0.5f);
                 break;
             case 63:
-                res = new Vector3(-1.394f,-0.2f,0); //#
+                res = new Vector3(-1.394f,-0.2f,-0.5f); //#
                 break;
             case 64:
-                res = new Vector3(-0.962f,-1.69f,0);
+                res = new Vector3(-0.962f,-1.69f,-0.5f);
                 break;
             case 65:
-                res = new Vector3(-0.075f,-1.69f,0);
+                res = new Vector3(-0.075f,-1.69f,-0.5f);
                 break;
             case 66:
-                res = new Vector3(0.364f,-0.2f,0); //#
+                res = new Vector3(0.364f,-0.2f,-0.5f); //#
                 break;
             case 67:
-                res = new Vector3(0.809f,-1.69f,0);
+                res = new Vector3(0.809f,-1.69f,-0.5f);
                 break;
             case 68:
-                res = new Vector3(1.245f,-0.2f,0); //#
+                res = new Vector3(1.245f,-0.2f,-0.5f); //#
                 break;
             case 69:
-                res = new Vector3(1.68f,-1.69f,0);
+                res = new Vector3(1.68f,-1.69f,-0.5f);
                 break;
             case 70:
-                res = new Vector3(2.124f,-0.2f,0); //#
+                res = new Vector3(2.124f,-0.2f,-0.5f); //#
                 break;
             case 71:
-                res = new Vector3(2.58f,-1.69f,0);
+                res = new Vector3(2.58f,-1.69f,-0.5f);
                 break;
             case 72:
-                res = new Vector3(3.44f,-1.69f,0);
+                res = new Vector3(3.44f,-1.69f,-0.5f);
                 break;
             case 73:
-                res = new Vector3(3.882f,-0.2f,0); //#
+                res = new Vector3(3.882f,-0.2f,-0.5f); //#
                 break;
             case 74:
-                res = new Vector3(4.32f,-1.69f,0);
+                res = new Vector3(4.32f,-1.69f,-0.5f);
                 break;
             case 75:
-                res = new Vector3(4.759f,-0.2f,0); //#
+                res = new Vector3(4.759f,-0.2f,-0.5f); //#
                 break;
             case 76:
-                res = new Vector3(5.2f,-1.69f,0);
+                res = new Vector3(5.2f,-1.69f,-0.5f);
                 break;
             case 77:
-                res = new Vector3(6.08f,-1.69f,0);
+                res = new Vector3(6.08f,-1.69f,-0.5f);
                 break;
             case 78:
-                res = new Vector3(6.525f,-0.2f,0); //#
+                res = new Vector3(6.525f,-0.2f,-0.5f); //#
                 break;
             case 79:
-                res = new Vector3(6.94f,-1.69f,0);
+                res = new Vector3(6.94f,-1.69f,-0.5f);
                 break;
             case 80:
-                res = new Vector3(7.408f,-0.2f,0); //#
+                res = new Vector3(7.408f,-0.2f,-0.5f); //#
                 break;
             case 81:
-                res = new Vector3(7.84f,-1.69f,0);
+                res = new Vector3(7.84f,-1.69f,-0.5f);
                 break;
             case 82:
-                res = new Vector3(8.285f,-0.2f,0); //#
+                res = new Vector3(8.285f,-0.2f,-0.5f); //#
                 break;
             case 83:
-                res = new Vector3(8.72f,-1.69f,0);
+                res = new Vector3(8.72f,-1.69f,-0.5f);
                 break;
             default:
                 res = new Vector3(0,0,0);

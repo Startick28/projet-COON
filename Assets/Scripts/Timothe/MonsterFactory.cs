@@ -9,8 +9,12 @@ public class MonsterFactory : MonoBehaviour
 
 	[SerializeField] private Monster originalMonster;
 
+	public GameObject ennemiesContainer;
+
 	private static Queue<Monster> deadMonsters = new Queue<Monster>();
 
+
+	public Sprite[] spriteArray = new Sprite[12];
 	public Sprite type0;
 	public Sprite type1;
 	public Sprite type2;
@@ -42,7 +46,7 @@ public class MonsterFactory : MonoBehaviour
 		}
 	}
 
-	public GameObject GetMonster(Monster originalMonster, Vector3 pos, int type)
+	public GameObject GetMonster(Vector3 pos, int type)
 	{
 
 		Monster monster;
@@ -53,51 +57,53 @@ public class MonsterFactory : MonoBehaviour
 			monster.gameObject.SetActive(true);
 			monster.transform.position = pos;
 			monster.type = type;
-			if (monster.type == 0)
+			monster.transform.SetParent(ennemiesContainer.transform);
+
+			if ((monster.type-36)%12 == 0)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type0;
 			}
-			if (monster.type == 1)
+			if ((monster.type-36)%12 == 1)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type1;
 			}
-			if (monster.type == 2)
+			if ((monster.type-36)%12 == 2)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type2;
 			}
-			if (monster.type == 3)
+			if ((monster.type-36)%12 == 3)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type3;
 			}
-			if (monster.type == 4)
+			if ((monster.type-36)%12 == 4)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type4;
 			}
-			if (monster.type == 5)
+			if ((monster.type-36)%12 == 5)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type5;
 			}
-			if (monster.type == 6)
+			if ((monster.type-36)%12 == 6)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type6;
 			}
-			if (monster.type == 7)
+			if ((monster.type-36)%12 == 7)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type7;
 			}
-			if (monster.type == 8)
+			if ((monster.type-36)%12 == 8)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type8;
 			}
-			if (monster.type == 9)
+			if ((monster.type-36)%12 == 9)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type9;
 			}
-			if (monster.type == 10)
+			if ((monster.type-36)%12 == 10)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type10;
 			}
-			if (monster.type == 11)
+			if ((monster.type-36)%12 == 11)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type11;
 			}
@@ -106,51 +112,52 @@ public class MonsterFactory : MonoBehaviour
 		{
 			monster = Instantiate(originalMonster, pos, Quaternion.identity);
 			monster.type = type;
-			if (monster.type == 0)
+			monster.transform.SetParent(ennemiesContainer.transform);
+			if ((monster.type-36)%12 == 0)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type0;
 			}
-			if (monster.type == 1)
+			if ((monster.type-36)%12 == 1)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type1;
 			}
-			if (monster.type == 2)
+			if ((monster.type-36)%12 == 2)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type2;
 			}
-			if (monster.type == 3)
+			if ((monster.type-36)%12 == 3)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type3;
 			}
-			if (monster.type == 4)
+			if ((monster.type-36)%12 == 4)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type4;
 			}
-			if (monster.type == 5)
+			if ((monster.type-36)%12 == 5)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type5;
 			}
-			if (monster.type == 6)
+			if ((monster.type-36)%12 == 6)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type6;
 			}
-			if (monster.type == 7)
+			if ((monster.type-36)%12 == 7)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type7;
 			}
-			if (monster.type == 8)
+			if ((monster.type-36)%12 == 8)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type8;
 			}
-			if (monster.type == 9)
+			if ((monster.type-36)%12 == 9)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type9;
 			}
-			if (monster.type == 10)
+			if ((monster.type-36)%12 == 10)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type10;
 			}
-			if (monster.type == 11)
+			if ((monster.type-36)%12 == 11)
 			{
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type11;
 			}

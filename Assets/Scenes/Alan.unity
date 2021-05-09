@@ -31692,6 +31692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1702740945}
+  songNumber: 0
   bpm: 120
   firstBeatOffset: 0
   bps: 2
@@ -31701,8 +31702,7 @@ MonoBehaviour:
   songPositionInBeats: 0
   currentChunk: 0
   songArrayIndice: 0
-  cubePrefab: {fileID: 6038423779077534193, guid: 2c2ef04884ce4e94e8f10856ea03d0fa,
-    type: 3}
+  monsterPrefab: {fileID: 0}
   ennemiesContainer: {fileID: 1741270438}
   fireTransforms:
   - {fileID: 0}

@@ -35,8 +35,6 @@ public class BasicLine : MonoBehaviour
         }
 
         material.SetFloat("Laser_Alpha", 0f);
-
-
     }
     
 }

@@ -28,7 +28,7 @@ public class SongManager : MonoBehaviour
     public GameObject ennemiesContainer;
 
     public Transform[] fireTransforms = new Transform[5];
-
+    public Material[] fireMaterials = new Material[5];
 
    public void Awake()
     {
@@ -48,7 +48,7 @@ public class SongManager : MonoBehaviour
         song = songList[GameManager.instance.songNumber];
         musicSource = GetComponent<AudioSource>();
 
-        musicSource.clip = GameManager.instance.clip;
+        musicSource.clip = GameManager.instance.clips[GameManager.instance.songNumber];
         bpm = song.bpm;
         firstBeatOffset = song.offset;
 
@@ -168,6 +168,47 @@ public class SongManager : MonoBehaviour
         fireTransforms[3].localScale = originalScale2;
         fireTransforms[4].localScale = originalScale2;
 
+    }
+
+
+    
+    public IEnumerator FireColorPulse() {
+        float r;
+        float pulseLength = 0.2f;
+
+        for (float i = 0f; i<pulseLength/4 ; i+= Time.deltaTime) {
+            
+            r = i/ (pulseLength/4);
+
+            for (int j = 0; j<5; j++) {
+                fireMaterials[j].SetFloat("_Hue", Mathf.Lerp(0f,0.8f,r) );
+            }
+
+            //fireMat1.SetFloat("_Hue", Mathf.Lerp(0f,0.8f,r) );
+            //fireMat2.SetFloat("_Hue", Mathf.Lerp(0f,0.8f,r) );
+
+            yield return null;
+        }
+
+        for (int j = 0; j<5; j++) {
+                fireMaterials[j].SetFloat("_Hue", 0.8f );
+        }
+        //fireMat1.SetFloat("_Hue",0.8f );
+        //fireMat2.SetFloat("_Hue",0.8f );
+        /*
+        for (float i = 0f; i<3*pulseLength/4 ; i+= Time.deltaTime) {
+            
+            r = i / (3*pulseLength/4);
+
+            fireMat1.SetFloat("_Hue", Mathf.Lerp(80,0,r*r) );
+            fireMat2.SetFloat("_Hue", Mathf.Lerp(80,0,r*r) );
+
+            yield return null;
+        }
+
+        fireMat1.SetFloat("_Hue",0 );
+        fireMat2.SetFloat("_Hue",0 );
+        */
     }
 
 }

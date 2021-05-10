@@ -21,16 +21,21 @@ public class Monster : MonoBehaviour
     {
         transform.Translate(0, -SongManager.instance.bps * Time.deltaTime * SongManager.instance.song.speedMultiplier, 0);
         if (transform.position.y < 1.4f) {
+            GameManager.instance.sfxSource.PlayOneShot(GameManager.instance.playerHit,0.6f);
+            StartCoroutine(SongManager.instance.FireColorPulse());
             MonsterFactory.EndMonster(this);
+            vie.TakeDamage(5);
         }
 
     }
 
     public void Hit()
     {
+
         float Y = transform.position.y;
         if (Y >= BasicLine.lineHeight - 0.04 && Y <= BasicLine.lineHeight + 0.04)
         {
+            GameManager.instance.sfxSource.PlayOneShot(GameManager.instance.monsterHit,0.5f);
             Debug.Log("PERFECT");
             vie.Heal(15);
             score.GainPoints(300);
@@ -38,6 +43,7 @@ public class Monster : MonoBehaviour
         }
         else if ((Y >= BasicLine.lineHeight - 0.07 && Y <= BasicLine.lineHeight - 0.04) || (Y >= BasicLine.lineHeight + 0.04 && Y <= BasicLine.lineHeight + 0.07))
         {
+            GameManager.instance.sfxSource.PlayOneShot(GameManager.instance.monsterHit,0.5f);
             Debug.Log("GOOD");
             vie.Heal(10);
             score.GainPoints(100);
@@ -45,8 +51,9 @@ public class Monster : MonoBehaviour
         }
         else if ((Y >= BasicLine.lineHeight - 0.1 && Y <= BasicLine.lineHeight - 0.07) || (Y >= BasicLine.lineHeight + 0.07 && Y <= BasicLine.lineHeight + 1))
         {
+            GameManager.instance.sfxSource.PlayOneShot(GameManager.instance.monsterHit,0.3f);
             Debug.Log("OK");
-            vie.Heal(15);
+            vie.Heal(5);
             score.GainPoints(50);
             MonsterFactory.EndMonster(this);
         }

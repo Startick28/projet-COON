@@ -31551,7 +31551,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1702740945}
-  songNumber: 0
   bpm: 120
   firstBeatOffset: 0
   bps: 2
@@ -37088,6 +37087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 3577b892a2bab684ab03da26c9226733, type: 3}
+  songNumber: 0
 --- !u!4 &2125794104
 Transform:
   m_ObjectHideFlags: 0

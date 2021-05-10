@@ -253,8 +253,10 @@ public class MonsterFactory : MonoBehaviour
 
 	public static void EndMonster(Monster monster)
 	{
+		monster.gameObject.GetComponent<ParticleSystem>().Emit(5);
 		monster.gameObject.SetActive(false);
 		deadMonsters.Enqueue(monster);
+
 	}
 
 }

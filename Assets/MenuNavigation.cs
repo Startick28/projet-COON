@@ -20,7 +20,7 @@ public class MenuNavigation : MonoBehaviour
 
     private int selectedButton;
 
-    private void OnLevelWasLoaded(int level)
+    /*private void OnLevelWasLoaded(int level)
     {
         menu = 1;
         selectedButton = 1;
@@ -29,7 +29,7 @@ public class MenuNavigation : MonoBehaviour
         button3.OnDeselect(null);
         button4.OnDeselect(null);
         button5.OnDeselect(null);
-    }
+    }*/
     void Start()
     {
         menu = 1;

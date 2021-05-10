@@ -541,6 +541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 419715399}
   - component: {fileID: 419715400}
+  - component: {fileID: 419715401}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -584,6 +585,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playFirstButton: {fileID: 320886692}
   musiqueFirstButton: {fileID: 1266155365}
+--- !u!114 &419715401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419715398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24deb3f3a5690044ba5e1fae8cb20d9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button1: {fileID: 320886694}
+  button2: {fileID: 2028676354}
+  button3: {fileID: 508438098}
+  button4: {fileID: 1266155367}
+  button5: {fileID: 2036993210}
 --- !u!1 &508438096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,7 +1624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1729460250
 MonoBehaviour:
   m_ObjectHideFlags: 0

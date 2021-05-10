@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicLine : MonoBehaviour
+public class Fiyah : MonoBehaviour
 {
     public Material material;
-    public LineRenderer lineRenderer;
     public static float lineHeight = 3f;    
     
     public static float pulseLength = 0.2f;
@@ -17,24 +16,21 @@ public class BasicLine : MonoBehaviour
             
             r = i/ (pulseLength/4);
 
-            material.SetFloat("Laser_Alpha", Mathf.Lerp(0,1,r) );
-            lineRenderer.widthMultiplier = Mathf.Lerp(0.1f,0.2f,r);
+            material.SetFloat("Hue", Mathf.Lerp(0f,0.25f,r) );
 
             yield return null;
         }
-        material.SetFloat("Laser_Alpha", 1f);
+        material.SetFloat("Hue", 0.25f);
 
         for (float i = 0f; i<3*pulseLength/4 ; i+= Time.deltaTime) {
             
             r = i / (3*pulseLength/4);
 
-            material.SetFloat("Laser_Alpha", Mathf.Lerp(1,0,r*r) );
-            lineRenderer.widthMultiplier = Mathf.Lerp(0.2f,0.1f,r);
+            material.SetFloat("Hue", Mathf.Lerp(0.25f,0f,r*r*r) );
 
             yield return null;
         }
 
-        material.SetFloat("Laser_Alpha", 0f);
+        material.SetFloat("Hue", 0f);
     }
-    
 }

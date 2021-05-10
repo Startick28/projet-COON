@@ -23,7 +23,7 @@ public class MonsterFactory : MonoBehaviour
 		{
 
 			_instance = this;
-			DontDestroyOnLoad(this.gameObject);
+			deadMonsters.Clear();
 
 			//Rest of your Awake code
 

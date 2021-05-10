@@ -7,7 +7,14 @@ public class GameManager : MonoBehaviour
     
     public static GameManager instance;
 
-    public AudioClip clip;
+    public AudioClip[] clips = new AudioClip[2];
+
+    public AudioSource sfxSource;
+    public AudioClip monsterHit;
+    public AudioClip playerHit;
+    public AudioClip menuSound;
+    public AudioClip menuSelect;
+
 
     public int songNumber= 0;
 
@@ -16,7 +23,7 @@ public class GameManager : MonoBehaviour
         if(instance)
         {
             Debug.Log("Il y a déjà une instance de GameManager " + name);
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {

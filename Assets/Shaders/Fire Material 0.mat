@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fire Material 1
+  m_Name: Fire Material 0
   m_Shader: {fileID: -6465566751694194690, guid: 7b7ee2cd22e4a4a4da122d68b485635b,
     type: 3}
   m_ShaderKeywords: 
@@ -32,7 +32,7 @@ Material:
     - Vector1_76369FB7: -0.2
     - _Hue: 0
     m_Colors:
-    - Color_10C9FE58: {r: 1.5529412, g: 0.3137255, b: 2.9960785, a: 0}
+    - Color_10C9FE58: {r: 1.6, g: 0.3137255, b: 2.9960785, a: 0}
     - Fire_Color: {r: 1.1294118, g: 0, b: 2.9960785, a: 1}
     - Vector2_3A14B507: {r: -0.2, g: -0.5, b: 0, a: 0}
     - Vector2_778A3FD3: {r: 0, g: -0.4, b: 0, a: 0}

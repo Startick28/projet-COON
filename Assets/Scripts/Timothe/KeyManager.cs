@@ -5,19 +5,12 @@ using UnityEngine.UI;
 
 public class KeyManager : MonoBehaviour
 {
-    private PlayerHealth vie;
+    public PlayerHealth vie;
     public static KeyManager instance;
-    public Text keyText;
 
     public Indicator indicatorPrefab;
     public Material[] materials = new Material[12];
     public BasicLine[] lines = new BasicLine[12];
-
-    //public ArrayList lineTypes = new ArrayList();
-    public Renderer lineRenderer;
-    public Material baseLineMaterial;
-    private float colorTimer = 0f;
-    private bool changeLineColor = false;
 
     public enum Key {
         A0, A0s, B0, 
@@ -47,25 +40,14 @@ public class KeyManager : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        keyText.text = "Current Key Pressed : " + "None";
-    }
 
     void Update()
     {
-        //Affichage info dernière note
-        for (int i = 21 ; i <= 108; i++) {
-            if (MidiJack.MidiMaster.GetKeyDown(i)) {
-                lastKey = (Key) i-21;
-                keyText.text = "Current Key Pressed : " + i.ToString();
-            }
-        }
-
         RaycastHit hit;
         Indicator tmp;
         Monster tmpMonster;
         //lineTypes.Clear();
+        
         for (int i = 48 ; i <= 83; i++) {
             // QUAND ON APPUIE SUR UNE TOUCHE
             if (MidiJack.MidiMaster.GetKeyDown(i)) {
@@ -85,7 +67,6 @@ public class KeyManager : MonoBehaviour
                 {
                     if (hit.collider.CompareTag("Monster"))
                     {
-                        Debug.Log("AH");
                         tmpMonster = hit.transform.GetComponent<Monster>();
                         if (tmpMonster.type == i) tmpMonster.Hit();
                     }
@@ -96,19 +77,137 @@ public class KeyManager : MonoBehaviour
             }
         }
 
-        if (changeLineColor) {
-            colorTimer += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.A)) {
+            PressedKey(48);
         }
-        if (colorTimer>=0.1f) {
-            colorTimer = 0f;
-            changeLineColor = false;
-            lineRenderer.material = baseLineMaterial;
+        if (Input.GetKeyDown(KeyCode.Z)) {
+            PressedKey(49);
         }
+        if (Input.GetKeyDown(KeyCode.E)) {
+            PressedKey(50);
+        }
+        if (Input.GetKeyDown(KeyCode.R)) {
+            PressedKey(51);
+        }
+        if (Input.GetKeyDown(KeyCode.T)) {
+            PressedKey(52);
+        }
+        if (Input.GetKeyDown(KeyCode.Y)) {
+            PressedKey(53);
+        }
+        if (Input.GetKeyDown(KeyCode.U)) {
+            PressedKey(54);
+        }
+        if (Input.GetKeyDown(KeyCode.I)) {
+            PressedKey(55);
+        }
+        if (Input.GetKeyDown(KeyCode.O)) {
+            PressedKey(56);
+        }
+        if (Input.GetKeyDown(KeyCode.P)) {
+            PressedKey(57);
+        }
+        if (Input.GetKeyDown(KeyCode.RightBracket)) {
+            PressedKey(58);
+        }
+        if (Input.GetKeyDown(KeyCode.Semicolon)) {
+            PressedKey(59);
+        }
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            PressedKey(60);
+        }
+        if (Input.GetKeyDown(KeyCode.S)) {
+            PressedKey(61);
+        }
+        if (Input.GetKeyDown(KeyCode.D)) {
+            PressedKey(62);
+        }
+        if (Input.GetKeyDown(KeyCode.F)) {
+            PressedKey(63);
+        }
+        if (Input.GetKeyDown(KeyCode.G)) {
+            PressedKey(64);
+        }
+        if (Input.GetKeyDown(KeyCode.H)) {
+            PressedKey(65);
+        }
+        if (Input.GetKeyDown(KeyCode.J)) {
+            PressedKey(66);
+        }
+        if (Input.GetKeyDown(KeyCode.K)) {
+            PressedKey(67);
+        }
+        if (Input.GetKeyDown(KeyCode.L)) {
+            PressedKey(68);
+        }
+        if (Input.GetKeyDown(KeyCode.M)) {
+            PressedKey(69);
+        }
+        if (Input.GetKeyDown(KeyCode.BackQuote)) {
+            PressedKey(70);
+        }
+        if (Input.GetKeyDown(KeyCode.Backslash)) {
+            PressedKey(71);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift)) {
+            PressedKey(72);
+        }
+        if (Input.GetKeyDown(KeyCode.W)) {
+            PressedKey(73);
+        }
+        if (Input.GetKeyDown(KeyCode.X)) {
+            PressedKey(74);
+        }
+        if (Input.GetKeyDown(KeyCode.C)) {
+            PressedKey(75);
+        }
+        if (Input.GetKeyDown(KeyCode.V)) {
+            PressedKey(76);
+        }
+        if (Input.GetKeyDown(KeyCode.B)) {
+            PressedKey(77);
+        }
+        if (Input.GetKeyDown(KeyCode.N)) {
+            PressedKey(78);
+        }
+        if (Input.GetKeyDown(KeyCode.Comma)) {
+            PressedKey(79);
+        }
+        if (Input.GetKeyDown(KeyCode.Period)) {
+            PressedKey(80);
+        }
+        if (Input.GetKeyDown(KeyCode.Slash)) {
+            PressedKey(81);
+        }
+        if (Input.GetKeyDown(KeyCode.BackQuote)) {
+            PressedKey(82);
+        }
+        if (Input.GetKeyDown(KeyCode.RightShift)) {
+            PressedKey(83);
+        }
+
     }
 
-    void FixedUpdate()
+    void PressedKey(int i)
     {
-        
+        RaycastHit hit;
+        Indicator tmp;
+        Monster tmpMonster;
+        // Décrémenter la vie
+        vie.TakeDamage(5);
+        // Affichage de l'indicateur
+        tmp = Instantiate(indicatorPrefab,noteToPos(i),Quaternion.identity);
+        tmp.gameObject.GetComponent<MeshRenderer>().material = materials[(i-36)%12];
+        StartCoroutine(lines[(i-36)%12].Pulse());
+        // Tests collisions
+        if (Physics.Raycast(noteToPos(i),Vector3.up, out hit, 5))
+        {
+            if (hit.collider.CompareTag("Monster"))
+            {
+                tmpMonster = hit.transform.GetComponent<Monster>();
+                if (tmpMonster.type == i) tmpMonster.Hit();
+            }
+        }
     }
 
     public static Vector3 noteToPos(int note) {

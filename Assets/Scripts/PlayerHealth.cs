@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            SceneManager.LoadScene("Menu");
+            StartCoroutine(Die());
         }
         else
             healthManager.SetHealth(currentHealth);
@@ -37,4 +37,11 @@ public class PlayerHealth : MonoBehaviour
         }
         healthManager.SetHealth(currentHealth);
     }
+
+    public IEnumerator Die()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("Menu");
+    }
+
 }

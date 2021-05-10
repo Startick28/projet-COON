@@ -21,8 +21,8 @@ public class Monster : MonoBehaviour
     {
         transform.Translate(0, -SongManager.instance.bps * Time.deltaTime * SongManager.instance.song.speedMultiplier, 0);
         if (transform.position.y < 1.4f) {
-            GameManager.instance.sfxSource.PlayOneShot(GameManager.instance.playerHit,0.6f);
-            StartCoroutine(SongManager.instance.FireColorPulse());
+            GameManager.instance.sfxSource.PlayOneShot(GameManager.instance.playerHit,0.4f);
+            SongManager.instance.FiyahPulse();
             MonsterFactory.EndMonster(this);
             vie.TakeDamage(5);
         }

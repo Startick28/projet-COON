@@ -13,20 +13,7 @@ public class MonsterFactory : MonoBehaviour
 
 	private static Queue<Monster> deadMonsters = new Queue<Monster>();
 
-
-	public Sprite[] spriteArray = new Sprite[12];
-	public Sprite type0;
-	public Sprite type1;
-	public Sprite type2;
-	public Sprite type3;
-	public Sprite type4;
-	public Sprite type5;
-	public Sprite type6;
-	public Sprite type7;
-	public Sprite type8;
-	public Sprite type9;
-	public Sprite type10;
-	public Sprite type11;
+	public Sprite[] spriteArray = new Sprite[6];
 
 	void Awake()
 	{
@@ -35,7 +22,7 @@ public class MonsterFactory : MonoBehaviour
 		{
 
 			_instance = this;
-			DontDestroyOnLoad(this.gameObject);
+			deadMonsters.Clear();
 
 			//Rest of your Awake code
 
@@ -50,6 +37,8 @@ public class MonsterFactory : MonoBehaviour
 	{
 
 		Monster monster;
+		int randomNumber;
+
 
 		if (deadMonsters.Count > 0)
 		{
@@ -58,108 +47,204 @@ public class MonsterFactory : MonoBehaviour
 			monster.transform.position = pos;
 			monster.type = type;
 			monster.transform.SetParent(ennemiesContainer.transform);
+			
+			if((monster.type-36)%12 == 0)
+            {
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.91961f, 0.03137f, 0.00000f);
+        
+            }
 
-			if ((monster.type-36)%12 == 0)
+			if ((monster.type - 36) % 12 == 1)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type0;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.77255f, 0.09804f, 0.36471f);
+
 			}
-			if ((monster.type-36)%12 == 1)
+
+			if ((monster.type - 36) % 12 == 2)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type1;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.77255f, 0.09804f, 0.76863f);
+
 			}
-			if ((monster.type-36)%12 == 2)
+
+			if ((monster.type - 36) % 12 == 3)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type2;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.43922f, 0.09804f, 0.77255f);
+
 			}
-			if ((monster.type-36)%12 == 3)
+
+			if ((monster.type - 36) % 12 == 4)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type3;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.15294f, 0.77255f);
+
 			}
-			if ((monster.type-36)%12 == 4)
+
+			if ((monster.type - 36) % 12 == 5)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type4;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.49412f, 0.77255f);
+
 			}
-			if ((monster.type-36)%12 == 5)
+
+			if ((monster.type - 36) % 12 == 6)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type5;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.76078f, 0.77255f);
+
 			}
-			if ((monster.type-36)%12 == 6)
+
+			if ((monster.type - 36) % 12 == 7)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type6;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.77255f, 0.42745f);
+
 			}
-			if ((monster.type-36)%12 == 7)
+
+			if ((monster.type - 36) % 12 == 8)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type7;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.77255f, 0.10588f);
+
 			}
-			if ((monster.type-36)%12 == 8)
+
+			if ((monster.type - 36) % 12 == 9)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type8;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.42353f, 0.77255f, 0.09804f);
+
 			}
-			if ((monster.type-36)%12 == 9)
+
+			if ((monster.type - 36) % 12 == 10)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type9;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.77255f, 0.76863f, 0.09804f);
+
 			}
-			if ((monster.type-36)%12 == 10)
+
+			if ((monster.type - 36) % 12 == 11)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type10;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.77255f, 0.36471f, 0.09804f);
+
 			}
-			if ((monster.type-36)%12 == 11)
-			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type11;
-			}
+
 		}
 		else
 		{
 			monster = Instantiate(originalMonster, pos, Quaternion.identity);
 			monster.type = type;
 			monster.transform.SetParent(ennemiesContainer.transform);
-			if ((monster.type-36)%12 == 0)
+
+			if ((monster.type - 36) % 12 == 0)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type0;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.91961f, 0.03137f, 0.00000f);
+
 			}
-			if ((monster.type-36)%12 == 1)
+
+			if ((monster.type - 36) % 12 == 1)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type1;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.77255f, 0.09804f, 0.36471f);
+
 			}
-			if ((monster.type-36)%12 == 2)
+
+			if ((monster.type - 36) % 12 == 2)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type2;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.77255f, 0.09804f, 0.76863f);
+
 			}
-			if ((monster.type-36)%12 == 3)
+
+			if ((monster.type - 36) % 12 == 3)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type3;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.43922f, 0.09804f, 0.77255f);
+
 			}
-			if ((monster.type-36)%12 == 4)
+
+			if ((monster.type - 36) % 12 == 4)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type4;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.3053874f, 0.2623709f, 0.8301887f);
+
 			}
-			if ((monster.type-36)%12 == 5)
+
+			if ((monster.type - 36) % 12 == 5)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type5;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.49412f, 0.77255f);
+
 			}
-			if ((monster.type-36)%12 == 6)
+
+			if ((monster.type - 36) % 12 == 6)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type6;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.76078f, 0.77255f);
+
 			}
-			if ((monster.type-36)%12 == 7)
+
+			if ((monster.type - 36) % 12 == 7)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type7;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.77255f, 0.42745f);
+
 			}
-			if ((monster.type-36)%12 == 8)
+
+			if ((monster.type - 36) % 12 == 8)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type8;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.77255f, 0.10588f);
+
 			}
-			if ((monster.type-36)%12 == 9)
+
+			if ((monster.type - 36) % 12 == 9)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type9;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.42353f, 0.77255f, 0.09804f);
+
 			}
-			if ((monster.type-36)%12 == 10)
+
+			if ((monster.type - 36) % 12 == 10)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type10;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.77255f, 0.76863f, 0.09804f);
+
 			}
-			if ((monster.type-36)%12 == 11)
+
+			if ((monster.type - 36) % 12 == 11)
 			{
-				monster.gameObject.GetComponent<SpriteRenderer>().sprite = type11;
+				randomNumber = Random.Range(0, 6);
+				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.77255f, 0.36471f, 0.09804f);
+
 			}
 		}
 		return monster.gameObject;
@@ -167,6 +252,7 @@ public class MonsterFactory : MonoBehaviour
 
 	public static void EndMonster(Monster monster)
 	{
+		Instantiate(monster.particlePrefab,monster.transform.position,Quaternion.identity);
 		monster.gameObject.SetActive(false);
 		deadMonsters.Enqueue(monster);
 	}

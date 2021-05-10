@@ -5,14 +5,25 @@ using TMPro;
 public class ChangeMusic : MonoBehaviour
 {
     // Start is called before the first frame update
-    public SongRepository.Song song = SongRepository.song1;
+    public TextMeshProUGUI chanson;
+    private SongRepository.Song[] songList = { SongRepository.song1, SongRepository.song2 };
 
     private void Start()
     {
-        gameObject.GetComponent<TextMeshPro>().text = song.ToString();
+        chanson.text = songList[GameManager.instance.songNumber].name;
     }
     public void NextMusic()
     {
-        gameObject.GetComponent<TextMeshPro>().text = song.ToString();
+        if (GameManager.instance.songNumber < songList.Length -1)
+        {
+            GameManager.instance.songNumber++;
+            chanson.text = songList[GameManager.instance.songNumber].name;
+        }
+        else
+        {
+            GameManager.instance.songNumber=0;
+            chanson.text = songList[GameManager.instance.songNumber].name;
+        }
+
     }
 }

@@ -16,19 +16,19 @@ public class PlayerHealth : MonoBehaviour
         healthManager.SetMaxHealth(maxHealth);
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            SceneManager.LoadScene("Menu");
+            StartCoroutine(Die());
         }
         else
             healthManager.SetHealth(currentHealth);
 
     }
 
-    void Heal(int heal)
+    public void Heal(int heal)
     {
         currentHealth += heal;
         if (currentHealth>= maxHealth)
@@ -37,4 +37,11 @@ public class PlayerHealth : MonoBehaviour
         }
         healthManager.SetHealth(currentHealth);
     }
+
+    public IEnumerator Die()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("Menu");
+    }
+
 }

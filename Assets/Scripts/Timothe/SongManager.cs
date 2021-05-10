@@ -8,7 +8,9 @@ public class SongManager : MonoBehaviour
     
     public AudioSource musicSource;
 
-    public SongRepository.Song song = SongRepository.song4;
+    public SongRepository.Song song =  SongRepository.song1;
+
+    private SongRepository.Song[] songList = { SongRepository.song1, SongRepository.song2 };
 
     public float bpm = 120f;
     public float firstBeatOffset = 0f;
@@ -26,7 +28,7 @@ public class SongManager : MonoBehaviour
     public GameObject ennemiesContainer;
 
     public Transform[] fireTransforms = new Transform[5];
-
+    public Fiyah[] fiyhas = new Fiyah[5];
 
    public void Awake()
     {
@@ -43,9 +45,10 @@ public class SongManager : MonoBehaviour
 
     void Start()
     {
+        song = songList[GameManager.instance.songNumber];
         musicSource = GetComponent<AudioSource>();
 
-        musicSource.clip = GameManager.instance.clip;
+        musicSource.clip = GameManager.instance.clips[GameManager.instance.songNumber];
         bpm = song.bpm;
         firstBeatOffset = song.offset;
 
@@ -165,6 +168,12 @@ public class SongManager : MonoBehaviour
         fireTransforms[3].localScale = originalScale2;
         fireTransforms[4].localScale = originalScale2;
 
+    }
+
+
+    public void FiyahPulse()
+    {
+        for (int i = 0; i<5; i++) StartCoroutine(fiyhas[i].Pulse());
     }
 
 }

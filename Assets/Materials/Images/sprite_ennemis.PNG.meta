@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 120
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,10 +108,10 @@ TextureImporter:
       name: sprite_ennemis_0
       rect:
         serializedVersion: 2
-        x: 58
-        y: 154
-        width: 71
-        height: 84
+        x: 53
+        y: 149
+        width: 80
+        height: 94
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +129,10 @@ TextureImporter:
       name: sprite_ennemis_1
       rect:
         serializedVersion: 2
-        x: 164
-        y: 157
-        width: 90
-        height: 129
+        x: 156
+        y: 148
+        width: 107
+        height: 145
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +150,10 @@ TextureImporter:
       name: sprite_ennemis_2
       rect:
         serializedVersion: 2
-        x: 285
-        y: 154
-        width: 92
-        height: 109
+        x: 281
+        y: 145
+        width: 102
+        height: 123
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

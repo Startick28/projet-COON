@@ -74,7 +74,7 @@ public class MenuNavigation : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.UpArrow) || MidiJack.MidiMaster.GetKeyDown(85))
+            if (Input.GetKeyDown(KeyCode.UpArrow) || MidiJack.MidiMaster.GetKeyDown(86))
             { //Input telling it to go up or down.
                 selectedButton -= 1;
                 if (selectedButton < 1) //If at end of list go back to top
@@ -104,7 +104,7 @@ public class MenuNavigation : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.Return) || MidiJack.MidiMaster.GetKeyDown(86))
+            if (Input.GetKeyDown(KeyCode.Return) || MidiJack.MidiMaster.GetKeyDown(88))
             {
                 Debug.Log("Picked: " + selectedButton); //For testing as the switch statment does nothing right now.
 
@@ -156,7 +156,7 @@ public class MenuNavigation : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.UpArrow) || MidiJack.MidiMaster.GetKeyDown(85))
+            if (Input.GetKeyDown(KeyCode.UpArrow) || MidiJack.MidiMaster.GetKeyDown(86))
             { //Input telling it to go up or down.
                 selectedButton -= 1;
                 if (selectedButton < 1) //If at end of list go back to top
@@ -182,7 +182,7 @@ public class MenuNavigation : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.Return) || MidiJack.MidiMaster.GetKeyDown(86))
+            if (Input.GetKeyDown(KeyCode.Return) || MidiJack.MidiMaster.GetKeyDown(88))
             {
                 Debug.Log("Picked: " + selectedButton); //For testing as the switch statment does nothing right now.
 

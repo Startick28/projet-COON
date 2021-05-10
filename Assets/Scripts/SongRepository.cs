@@ -77,7 +77,7 @@ public static class SongRepository
 
 
         song3.name = "Mortal Kombat";
-        song3.bpm = 135.15f;
+        song3.bpm = 135.18f;
         song3.offset = 3f;
         song3.speedMultiplier = 4;
         song3.notes = new float[][] {new float[]{0f,la1} , new float[]{0.5f,la1} , new float[]{1f,do2} , new float[]{1.5f,la1}, 

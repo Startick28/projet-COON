@@ -53,7 +53,7 @@ public class MonsterFactory : MonoBehaviour
             {
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(209, 8, 0, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.91961f, 0.03137f, 0.00000f);
         
             }
 
@@ -61,7 +61,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(197, 25, 93, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.77255f, 0.09804f, 0.36471f);
 
 			}
 
@@ -69,7 +69,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(197, 25, 196, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.77255f, 0.09804f, 0.76863f);
 
 			}
 
@@ -77,7 +77,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(112, 25, 197, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.43922f, 0.09804f, 0.77255f);
 
 			}
 
@@ -85,7 +85,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(25, 39, 197, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.15294f, 0.77255f);
 
 			}
 
@@ -93,7 +93,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(25, 126, 197, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.49412f, 0.77255f);
 
 			}
 
@@ -101,7 +101,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(25, 194, 197, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.76078f, 0.77255f);
 
 			}
 
@@ -109,7 +109,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(25, 197, 109, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.77255f, 0.42745f);
 
 			}
 
@@ -117,7 +117,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(25, 197, 27, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.77255f, 0.10588f);
 
 			}
 
@@ -125,7 +125,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(108, 197, 25, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.42353f, 0.77255f, 0.09804f);
 
 			}
 
@@ -133,7 +133,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(197, 196, 25, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.77255f, 0.76863f, 0.09804f);
 
 			}
 
@@ -141,7 +141,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(197, 93, 25, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.77255f, 0.36471f, 0.09804f);
 
 			}
 
@@ -156,7 +156,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(209, 8, 0, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.91961f, 0.03137f, 0.00000f);
 
 			}
 
@@ -164,7 +164,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(197, 25, 93, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.77255f, 0.09804f, 0.36471f);
 
 			}
 
@@ -172,7 +172,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(197, 25, 196, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.77255f, 0.09804f, 0.76863f);
 
 			}
 
@@ -180,7 +180,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(112, 25, 197, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.43922f, 0.09804f, 0.77255f);
 
 			}
 
@@ -188,7 +188,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(25, 39, 197, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.3053874f, 0.2623709f, 0.8301887f);
 
 			}
 
@@ -196,7 +196,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(25, 126, 197, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.49412f, 0.77255f);
 
 			}
 
@@ -204,7 +204,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(25, 194, 197, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.76078f, 0.77255f);
 
 			}
 
@@ -212,7 +212,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(25, 197, 109, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.77255f, 0.42745f);
 
 			}
 
@@ -220,7 +220,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(25, 197, 27, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.09804f, 0.77255f, 0.10588f);
 
 			}
 
@@ -228,7 +228,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(108, 197, 25, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.42353f, 0.77255f, 0.09804f);
 
 			}
 
@@ -236,7 +236,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(197, 196, 25, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.77255f, 0.76863f, 0.09804f);
 
 			}
 
@@ -244,7 +244,7 @@ public class MonsterFactory : MonoBehaviour
 			{
 				randomNumber = Random.Range(0, 6);
 				monster.gameObject.GetComponent<SpriteRenderer>().sprite = spriteArray[randomNumber];
-				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(197, 93, 25, 255);
+				monster.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.77255f, 0.36471f, 0.09804f);
 
 			}
 		}

@@ -9,8 +9,8 @@ public class Menu : MonoBehaviour
     public GameObject playFirstButton, musiqueFirstButton;
     private void Start()
     {
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(playFirstButton);
+        /*EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(playFirstButton);*/
     }
     public void Play()
     {
@@ -20,15 +20,15 @@ public class Menu : MonoBehaviour
 
     public void SelectMusic()
     {
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(musiqueFirstButton);
+        /*EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(musiqueFirstButton);*/
 
     }
 
     public void ShowMenu()
     {
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(playFirstButton);
+        /*EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(playFirstButton);*/
 
     }
 

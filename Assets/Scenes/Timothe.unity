@@ -31997,12 +31997,12 @@ MonoBehaviour:
   - {fileID: 898436405}
   - {fileID: 1545001293}
   - {fileID: 1700665675}
-  fireMaterials:
-  - {fileID: 2100000, guid: 16e22952b3f33ff43b9a74336f2a1cf7, type: 2}
-  - {fileID: 2100000, guid: 16e22952b3f33ff43b9a74336f2a1cf7, type: 2}
-  - {fileID: 2100000, guid: 16e22952b3f33ff43b9a74336f2a1cf7, type: 2}
-  - {fileID: 2100000, guid: a05cd8d21e5db214696e26d9e2b30dac, type: 2}
-  - {fileID: 2100000, guid: a05cd8d21e5db214696e26d9e2b30dac, type: 2}
+  fiyhas:
+  - {fileID: 828618117}
+  - {fileID: 1876867912}
+  - {fileID: 898436406}
+  - {fileID: 1545001294}
+  - {fileID: 1700665676}
 --- !u!4 &1702740947
 Transform:
   m_ObjectHideFlags: 0

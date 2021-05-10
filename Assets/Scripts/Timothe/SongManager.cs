@@ -8,7 +8,7 @@ public class SongManager : MonoBehaviour
     
     public AudioSource musicSource;
 
-    public SongRepository.Song song = SongRepository.song2;
+    public SongRepository.Song song = SongRepository.song4;
 
     public float bpm = 120f;
     public float firstBeatOffset = 0f;

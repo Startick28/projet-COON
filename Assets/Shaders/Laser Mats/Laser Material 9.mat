@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - Laser_Alpha: 0
+    - Laser_Alpha: 0.38757485
     - Laser_Scale: 20
     - Laser_Smoothness: 20
     - Laser_Thickness: 50

@@ -32,7 +32,7 @@ public static class SongRepository
 
     static SongRepository()
     {
-        song1.name = "chanson 1";
+        song1.name = "Au clair de la lune";
         song1.bpm = 89f;
         song1.offset = 3f;
         song1.speedMultiplier = 1;
@@ -51,7 +51,7 @@ public static class SongRepository
 
 
 
-        song2.name = "chanson 2";
+        song2.name = "Veridis Quo";
         song2.bpm = 107f;
         song2.offset = 3f;
         song2.speedMultiplier = 2;
@@ -76,7 +76,7 @@ public static class SongRepository
         new float[]{58.25f,do3,mi3} , new float[]{58.5f,mi2,la2}};
 
 
-
+        song3.name = "Mortal Kombat";
         song3.bpm = 135.15f;
         song3.offset = 3f;
         song3.speedMultiplier = 4;
@@ -123,6 +123,7 @@ public static class SongRepository
         new float[]{91f,la2}, new float[]{91.25f,si2}, new float[]{91.75f,sol2}
         };
 
+        song4.name = "chanson 4";
         song4.bpm = 128.12f;
         song4.offset = 3.2f;
         song4.speedMultiplier = 1.1f;

@@ -10,7 +10,7 @@ public class SongManager : MonoBehaviour
 
     public SongRepository.Song song =  SongRepository.song1;
 
-    private SongRepository.Song[] songList = { SongRepository.song1, SongRepository.song2 };
+    private SongRepository.Song[] songList = { SongRepository.song1, SongRepository.song2, SongRepository.song3 , SongRepository.song4 };
 
     public float bpm = 120f;
     public float firstBeatOffset = 0f;

@@ -6,7 +6,7 @@ public class ChangeMusic : MonoBehaviour
 {
     // Start is called before the first frame update
     public TextMeshProUGUI chanson;
-    private SongRepository.Song[] songList = { SongRepository.song1, SongRepository.song2 };
+    private SongRepository.Song[] songList = { SongRepository.song1, SongRepository.song2, SongRepository.song3, SongRepository.song4 };
 
     private void Start()
     {

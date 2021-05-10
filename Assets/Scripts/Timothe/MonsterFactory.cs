@@ -13,7 +13,6 @@ public class MonsterFactory : MonoBehaviour
 
 	private static Queue<Monster> deadMonsters = new Queue<Monster>();
 
-
 	public Sprite[] spriteArray = new Sprite[6];
 
 	void Awake()
@@ -253,10 +252,9 @@ public class MonsterFactory : MonoBehaviour
 
 	public static void EndMonster(Monster monster)
 	{
-		monster.gameObject.GetComponent<ParticleSystem>().Emit(5);
+		Instantiate(monster.particlePrefab,monster.transform.position,Quaternion.identity);
 		monster.gameObject.SetActive(false);
 		deadMonsters.Enqueue(monster);
-
 	}
 
 }

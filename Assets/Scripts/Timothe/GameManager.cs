@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public AudioClip clip;
 
+
     public int songNumber= 0;
 
     public void Awake()
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
         if(instance)
         {
             Debug.Log("Il y a déjà une instance de GameManager " + name);
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {

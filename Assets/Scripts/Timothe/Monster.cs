@@ -11,7 +11,11 @@ public class Monster : MonoBehaviour
     public PlayerHealth vie;
     public ScoreManager score;
 
-
+    void Start()
+    {
+        score = GameObject.Find("Score").GetComponent<ScoreManager>();
+        vie = GameObject.Find("Life").GetComponent<PlayerHealth>();
+    }
 
     void Update()
     {
@@ -28,22 +32,22 @@ public class Monster : MonoBehaviour
         if (Y >= BasicLine.lineHeight - 0.04 && Y <= BasicLine.lineHeight + 0.04)
         {
             Debug.Log("PERFECT");
-            //vie.Heal(15);
-            //score.GainPoints(300);
+            vie.Heal(15);
+            score.GainPoints(300);
             MonsterFactory.EndMonster(this);
         }
         else if ((Y >= BasicLine.lineHeight - 0.07 && Y <= BasicLine.lineHeight - 0.04) || (Y >= BasicLine.lineHeight + 0.04 && Y <= BasicLine.lineHeight + 0.07))
         {
             Debug.Log("GOOD");
-            //vie.Heal(10);
-            //score.GainPoints(100);
+            vie.Heal(10);
+            score.GainPoints(100);
             MonsterFactory.EndMonster(this);
         }
         else if ((Y >= BasicLine.lineHeight - 0.1 && Y <= BasicLine.lineHeight - 0.07) || (Y >= BasicLine.lineHeight + 0.07 && Y <= BasicLine.lineHeight + 1))
         {
             Debug.Log("OK");
-            //vie.Heal(15);
-            //score.GainPoints(50);
+            vie.Heal(15);
+            score.GainPoints(50);
             MonsterFactory.EndMonster(this);
         }
     }

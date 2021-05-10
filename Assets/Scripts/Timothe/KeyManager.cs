@@ -5,19 +5,12 @@ using UnityEngine.UI;
 
 public class KeyManager : MonoBehaviour
 {
-    private PlayerHealth vie;
+    public PlayerHealth vie;
     public static KeyManager instance;
-    public Text keyText;
 
     public Indicator indicatorPrefab;
     public Material[] materials = new Material[12];
     public BasicLine[] lines = new BasicLine[12];
-
-    //public ArrayList lineTypes = new ArrayList();
-    public Renderer lineRenderer;
-    public Material baseLineMaterial;
-    private float colorTimer = 0f;
-    private bool changeLineColor = false;
 
     public enum Key {
         A0, A0s, B0, 
@@ -47,30 +40,19 @@ public class KeyManager : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        keyText.text = "Current Key Pressed : " + "None";
-    }
 
     void Update()
     {
-        //Affichage info dernière note
-        for (int i = 21 ; i <= 108; i++) {
-            if (MidiJack.MidiMaster.GetKeyDown(i)) {
-                lastKey = (Key) i-21;
-                keyText.text = "Current Key Pressed : " + i.ToString();
-            }
-        }
-
         RaycastHit hit;
         Indicator tmp;
         Monster tmpMonster;
         //lineTypes.Clear();
+        
         for (int i = 48 ; i <= 83; i++) {
             // QUAND ON APPUIE SUR UNE TOUCHE
             if (MidiJack.MidiMaster.GetKeyDown(i)) {
                 // Décrémenter la vie
-                //vie.TakeDamage(5);
+                vie.TakeDamage(5);
 
 
                 // Affichage de l'indicateur
@@ -204,24 +186,6 @@ public class KeyManager : MonoBehaviour
             PressedKey(83);
         }
 
-
-        if (changeLineColor) {
-            colorTimer += Time.deltaTime;
-        }
-        if (colorTimer>=0.1f) {
-            colorTimer = 0f;
-            changeLineColor = false;
-            lineRenderer.material = baseLineMaterial;
-        }
-    }
-
-    void OnGUI()
-    {
-        Event e = Event.current;
-        if (e.isKey)
-        {
-            Debug.Log("Detected key code: " + e.keyCode);
-        }
     }
 
     void PressedKey(int i)
@@ -230,7 +194,7 @@ public class KeyManager : MonoBehaviour
         Indicator tmp;
         Monster tmpMonster;
         // Décrémenter la vie
-        //vie.TakeDamage(5);
+        vie.TakeDamage(5);
         // Affichage de l'indicateur
         tmp = Instantiate(indicatorPrefab,noteToPos(i),Quaternion.identity);
         tmp.gameObject.GetComponent<MeshRenderer>().material = materials[(i-36)%12];

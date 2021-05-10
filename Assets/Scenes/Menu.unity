@@ -956,6 +956,8 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: 3577b892a2bab684ab03da26c9226733, type: 3}
   - {fileID: 8300000, guid: 2ead284d538f0ef419f81a55c3d4188c, type: 3}
+  - {fileID: 8300000, guid: 3b277071554021449bdd407d999f71e1, type: 3}
+  - {fileID: 8300000, guid: ba1501fcfa134da41bbb428e6d813e19, type: 3}
   sfxSource: {fileID: 924024706}
   monsterHit: {fileID: 8300000, guid: 2d5b518889a687e4592dcb2d1c5bb875, type: 3}
   playerHit: {fileID: 8300000, guid: c2403eab2f88dd84a9d9d740d7076e2b, type: 3}

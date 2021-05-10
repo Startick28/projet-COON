@@ -541,7 +541,6 @@ GameObject:
   m_Component:
   - component: {fileID: 419715399}
   - component: {fileID: 419715400}
-  - component: {fileID: 419715401}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -585,23 +584,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playFirstButton: {fileID: 320886692}
   musiqueFirstButton: {fileID: 1266155365}
---- !u!114 &419715401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419715398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24deb3f3a5690044ba5e1fae8cb20d9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button1: {fileID: 320886694}
-  button2: {fileID: 2028676354}
-  button3: {fileID: 508438098}
-  button4: {fileID: 1266155367}
-  button5: {fileID: 2036993210}
 --- !u!1 &508438096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,7 +988,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1518,6 +1500,7 @@ GameObject:
   - component: {fileID: 1534063849}
   - component: {fileID: 1534063848}
   - component: {fileID: 1534063847}
+  - component: {fileID: 1534063851}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1607,6 +1590,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1534063851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534063846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24deb3f3a5690044ba5e1fae8cb20d9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button1: {fileID: 320886694}
+  button2: {fileID: 2028676354}
+  button3: {fileID: 508438098}
+  button4: {fileID: 1266155367}
+  button5: {fileID: 2036993210}
 --- !u!1 &1729460249
 GameObject:
   m_ObjectHideFlags: 0

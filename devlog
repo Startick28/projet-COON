@@ -1,1 +1,11 @@
+Historique :
+Nous avons pendant les premières semaines en tout et pour tout choisi notre sujet et déterminé ce que nous comptions faire. Nous n'avons commencé à écrire du code que lundi dernier. 
+Dans un premier temps, nous avons créé la base du jeu, sans les effets visuels ni les monstres. Pour le tester, nous avons implémenté notre première chanson, très simple : Au Clair De La Lune, et on disposait les blocs (qui correspondaient aux notes) à la main. 
+Puis nous avons implémenté les monstres, les effets sonores et visuels, les menus, la gestion des points de vie et d’autres morceaux.
+
+22/03/21: Choix du contrôleur, un piano, et du type de jeu, un jeu de rythme/tir ressemblant à Guitar Hero/Space Invaders
+19/04/21: Création du dépôt Git et du Trello, répartition des tâches à faire
+03/05/21 : Création d’une base de projet avec l’intégration du contrôleur alternatif, recherche des sprites pour l’apparence visuel du jeu
+Semaine du 03/05/21 au 10/05/21 : Codage des ennemis (monstres), intégration des différentes musiques, création des menus, intégration de l’UI
+10/05/21 : Présentation du projet et de la vidéo de démonstration
 

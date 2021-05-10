@@ -123,7 +123,7 @@ public static class SongRepository
         new float[]{91f,la2}, new float[]{91.25f,si2}, new float[]{91.75f,sol2}
         };
 
-        song4.name = "chanson 4";
+        song4.name = "Trauma";
         song4.bpm = 128.12f;
         song4.offset = 3.2f;
         song4.speedMultiplier = 1.1f;
